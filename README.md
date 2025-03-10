@@ -13,11 +13,12 @@ For this project, we used the MIMIC-IV (Medical Information Mart for Intensive C
 In this study, we focus on hospital admission specifically. To make the dataset more relevant to our study on 30-day readmissions among type 2 diabetes patients, we applied the these transformations:
 
 We filtered the data and cleaned it based on the following criteria to focus on the relevant subset of admissions:
-**1. Length of Stay:** Only hospital admissions with a length of stay exceeding 24 hours were retained
-**2. Mortality Status:** Admissions where the patient died during their first hospitalization were excluded
-**3. Discharge Destination:** Admissions where the patient was discharged to hospice care were excluded
-**4. Primary Diagnoses:** We retained only admissions where at least one of the top five diagnoses was related to type 2 diabetes
+**1. Length of Stay:** Only hospital admissions with a length of stay exceeding 24 hours were retained <br>
+**2. Mortality Status:** Admissions where the patient died during their first hospitalization were excluded <br>
+**3. Discharge Destination:** Admissions where the patient was discharged to hospice care were excluded <br>
+**4. Primary Diagnoses:** We retained only admissions where at least one of the top five diagnoses was related to type 2 diabetes<br>
 **5. Minimum Medical Activity:** To capture meaningful healthcare interactions, we included only admissions with at least one recorded lab test and one documented procedure.
+ 
  We engineered features by leveraging multiple tables in MIMIC-IV, mapping the m to the UCI Diabetes Dataset structure where possible. Despite limitations in MIMIC-IV data 
 coverage, we successfully constructed 50 features (49 predictors and 1 target variable).
 
