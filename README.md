@@ -13,12 +13,11 @@ For this project, we used the MIMIC-IV (Medical Information Mart for Intensive C
 In this study, we focus on hospital admission specifically. To make the dataset more relevant to our study on 30-day readmissions among type 2 diabetes patients, we applied the these transformations:
 
 We filtered the data and cleaned it based on the following criteria to focus on the relevant subset of admissions:
-
- **1. Length of Stay:** Only hospital admissions with a length of stay exceeding 24 hours were retained
- **2. Mortality Status:** Admissions where the patient died during their first hospitalization were excluded
- **3. Discharge Destination:** Admissions where the patient was discharged to hospice care were excluded
- **4. Primary Diagnoses:** We retained only admissions where at least one of the top five diagnoses was related to type 2 diabetes
- **5. Minimum Medical Activity:** To capture meaningful healthcare interactions, we included only admissions with at least one recorded lab test and one documented procedure.
+**1. Length of Stay:** Only hospital admissions with a length of stay exceeding 24 hours were retained
+**2. Mortality Status:** Admissions where the patient died during their first hospitalization were excluded
+**3. Discharge Destination:** Admissions where the patient was discharged to hospice care were excluded
+**4. Primary Diagnoses:** We retained only admissions where at least one of the top five diagnoses was related to type 2 diabetes
+**5. Minimum Medical Activity:** To capture meaningful healthcare interactions, we included only admissions with at least one recorded lab test and one documented procedure.
  We engineered features by leveraging multiple tables in MIMIC-IV, mapping the m to the UCI Diabetes Dataset structure where possible. Despite limitations in MIMIC-IV data 
 coverage, we successfully constructed 50 features (49 predictors and 1 target variable).
 
@@ -35,12 +34,12 @@ We also classifed the race groups, dealt with ICD codes in the preprocessing pha
 7. Data Type Conversion
      
 ### Methologies Used
- 1. A neural network technique (MLP)
- 2. Logistic Regression
- 3. Random Forest
- 4. K-Nearest Neighbors (KNN)
- 5. CatBoost
- 6. XGBoost
- 7. LightGBM.
+1. A neural network technique (MLP)
+2. Logistic Regression
+3. Random Forest
+4. K-Nearest Neighbors (KNN)
+5. CatBoost
+6. XGBoost
+7. LightGBM.
 
     We used  ROC-AUC as our primary metric for model evaluation because it can capture the model’s overall ability to discriminate between high-risk patients and low-risk patients across all thresholds. We also considered Recall as our second metric as it evaluates how well the model can identify high-risk patients
