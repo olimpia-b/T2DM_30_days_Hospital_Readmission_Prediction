@@ -10,8 +10,10 @@ Many predictive models for diabetic readmissions rely on outdated datasets, maki
 
 ### Data Source
 For this project, we used the MIMIC-IV (Medical Information Mart for Intensive Care IV) dataset, a publicly available database that contains de-identified health-related data from patients admitted to the intensive care units (ICUs) of the Beth Israel Deaconess Medical Center between 2008 and 2019. MIMIC-IV is widely used for healthcare research, offering rich data across demographics, admissions, laboratory results, diagnoses, prescriptions, and clinical notes, among others.<br>
-In this study, we focus on hospital admission specifically. To make the dataset more relevant to our study on 30-day readmissions among type 2 diabetes patients, we applied the these transformations:<br>
+In this study, we focus on hospital admission specifically. To make the dataset more relevant to our study on 30-day readmissions among type 2 diabetes patients, we applied the these transformations:
+
 We filtered the data and cleaned it based on the following criteria to focus on the relevant subset of admissions:
+
  **1. Length of Stay:** Only hospital admissions with a length of stay exceeding 24 hours were retained
  **2. Mortality Status:** Admissions where the patient died during their first hospitalization were excluded
  **3. Discharge Destination:** Admissions where the patient was discharged to hospice care were excluded
@@ -24,7 +26,7 @@ We also performed EDA on the data focusing on Demographic factors like Age, gend
 
 We also classifed the race groups, dealt with ICD codes in the preprocessing phase.
 ### Data Preprocessing Steps
-11. Feature Creation
+1. Feature Creation
 2. Feature Selection using Random Forest
 3. Standardizing Categorical Variables
 4. Handling Missing Data
